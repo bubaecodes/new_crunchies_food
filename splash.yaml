@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#FFFFFF"
+  image: assets/logo/crunchies_logo-removebg-preview.png
+  image_dark: assets/logo/crunchies_logo-removebg-preview.png
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#FFFFFF"
+    image: assets/logo/crunchies_logo-removebg-preview.png
+    image_dark: assets/logo/crunchies_logo-removebg-preview.png
+
+  web: false
