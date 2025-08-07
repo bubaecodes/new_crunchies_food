@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
-import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
 

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'New Crunchies Food App',
       home: OnboardingScreen(),
-      // bottom: MyDeviceUtils.getBottomNavigationBarHeight() + 10,
+      // bottom: MyDeviceUtils.getBottomNavigationBarHeight(),
     );
   }
 }

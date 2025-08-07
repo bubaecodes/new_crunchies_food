@@ -29,17 +29,20 @@ class MyImages{
   static const String onBoardingImage4 = "assets/images/onboarding/onboarding4.jpg";
   static const String onBoardingImage5 = "assets/images/onboarding/onboarding5.jpg";
 
-  ///Animations
-  // static const String verifyEmail = "";
-  // static const String successIllustration = "";
-  // static const String processingInfo = "";
-  // static const String successPopup = "";
-  // static const String emptyAnimation = "";
-
   ///Random
   static const String loyaltyImage = "assets/images/random/loyalty_image.jpg";
   static const String onTheCounter = "assets/images/random/crunchies_otc.jpg";
   static const String subImg = "assets/images/random/subscribe2.jpg";
+
+  ///Home Screen
+  static const String chickenLogo = "assets/logo/chicken_logo3.png";
+  static const String shopLogo = "assets/icons/shop_icon-removebg-preview.png";
+  static const String searchIcon = "assets/icons/search_icon-removebg-preview.png";
+
+  /// Home Body Category
+  static const String categoryImg1 = "assets/icons/category/category_all-removebg-preview.png";
+
+
 
 
   ///Banners

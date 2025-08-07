@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:new_crunchies_food/utils/constants/colors.dart';
-import 'package:new_crunchies_food/utils/constants/text_strings.dart';
 
 class MyButton extends StatelessWidget {
   const MyButton({

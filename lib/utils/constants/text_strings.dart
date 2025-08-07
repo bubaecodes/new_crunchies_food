@@ -17,7 +17,7 @@ class MyTexts {
   static const String onBoardingSubTitle1 = "Our meals are fresh, delicious, and made with so much love for you - a savory experience in every bite.";
   static const String onBoardingSubTitle2 = "You can place an order for swift delivery to your doorstep, or have the meal prepared just in time for you to pickup.";
   static const String onBoardingSubTitle3 = "Order food from anywhere a Crunchies outlet is present and for anyone. Taste the difference!";
-  static const String onBoardingSubTitle4 = "Let\'s dive into sumptuousness. When every other thing is not in your control, food can be!";
+  static const String onBoardingSubTitle4 = "Let's dive into sumptuousness. When every other thing is not in your control, food can be!";
 
   // ///General Menu Page
   // static const String generalMenuPageTitle = "Hey, Cruncher!";
@@ -58,10 +58,23 @@ class MyTexts {
   static const String locationCity = "City";
   static const String locationOutlet = "Outlet";
   static const String locationBtn = "Set location";
+  static const String locationSupportLink = "Contact Support";
 
-  /// AppBar
-  static const String appbarBtn = "Order Now";
-  static const String appbarLocation = "Enugu";
+  ///Set Location Screen
+  static const String setLocationHeading = "Set location";
+  static const String setLocationSubheading = "Searching for closest outlet to you...";
+  static const String setLocationSearch = "Closest outlet to you";
+
+  /// Home Screen AppBar
+  static const String homeAppBarHeading = "Good afternoon, Bubae.";
+  static const String homeAppBarSubHeading = "It's time for lunch - Taste the difference!";
+  static const String homeContainerHeading = "Ordering from:";
+  static const String homeContainerSubHeading = "Crunchies Fried Chicken, 262 Agbani Road, Enugu.";
+  static const String homeAppBarTextBtn = "Having issues?";
+
+  /// Home Screen Body Heading
+  static const String homeBodyHeading = "How may we delight you today?";
+  static const String homeBodySubHeading = "Categories";
 
   ///General Menu Page
   static const String bannerTitle1 = "Our Menu";
@@ -74,7 +87,7 @@ class MyTexts {
   ///Home
   static const String homeMenuOrderTitle = "Ordering from:";
   static const String homeMenuOrderSubTitle = bannerSubTitle1;
-  static const String homeMenuOutletTitle = "Outlet\'s address:";
+  static const String homeMenuOutletTitle = "Outlet's address:";
   static const String homeMenuOutletSubTitle = "96 Agbani road, by Nise bus stop, Enugu state";
 
   ///Store

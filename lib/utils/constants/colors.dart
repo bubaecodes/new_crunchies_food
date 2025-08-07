@@ -9,6 +9,8 @@ class MyColors{
   static const Color secondary = Color(0xFFED2939);
   // static const Color accent = Color(0xFFC6011F);
   static const Color accentFade = Color(0xFFC93030);
+  //static const Color lightPinkBg = Color(0xFFFFE6EA);
+  static const Color lightPinkBg = Color(0xFFFFECF2);
   static const Color pinkBg = Color(0xFFFFC0CB);
 
   ///General Colors

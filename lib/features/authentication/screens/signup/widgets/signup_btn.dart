@@ -6,7 +6,6 @@ import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
 import 'package:get/get.dart';
-import 'package:new_crunchies_food/utils/device/device_utility.dart';
 
 class SignupBtn extends StatelessWidget {
   const SignupBtn({super.key});

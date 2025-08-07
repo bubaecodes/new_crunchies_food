@@ -26,25 +26,21 @@ class OnboardingScreen extends StatelessWidget {
             children: const [
               OnBoardingPage(
                 image: MyImages.onBoardingImage1,
-                //hashtag: MyTexts.onBoardingHashtag1,
                 title: MyTexts.onBoardingTitle1,
                 subTitle: MyTexts.onBoardingSubTitle1,
               ),
               OnBoardingPage(
                 image: MyImages.onBoardingImage2,
-                //hashtag: MyTexts.onBoardingHashtag2,
                 title: MyTexts.onBoardingTitle2,
                 subTitle: MyTexts.onBoardingSubTitle2,
               ),
               OnBoardingPage(
                 image: MyImages.onBoardingImage3,
-                //hashtag: MyTexts.onBoardingHashtag3,
                 title: MyTexts.onBoardingTitle3,
                 subTitle: MyTexts.onBoardingSubTitle4,
               ),
               OnBoardingPage(
                 image: MyImages.onBoardingImage4,
-                //hashtag: MyTexts.onBoardingHashtag4,
                 title: MyTexts.onBoardingTitle4,
                 subTitle: MyTexts.onBoardingSubTitle4,
               ),
