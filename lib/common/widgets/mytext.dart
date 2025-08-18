@@ -6,13 +6,15 @@ class MyText extends StatelessWidget {
     required this.title,
     required this.fontVariation,
     required this.fontSize,
-    this.color
+    this.color,
+    this.textDecoration
   });
 
   final String title;
   final FontVariation fontVariation;
   final double fontSize;
   final Color? color;
+  final TextDecoration? textDecoration;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class MyText extends StatelessWidget {
         color: color,
         fontSize: fontSize,
         fontFamily: "Manrope",
+        decoration: textDecoration
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'package:new_crunchies_food/features/authentication/screens/onboarding/wi
 import 'package:new_crunchies_food/features/authentication/screens/onboarding/widgets/onboarding_next_btn.dart';
 import 'package:new_crunchies_food/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:new_crunchies_food/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
-import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/image_strings.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +15,7 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(OnBoardingController());
     return Scaffold(
-      backgroundColor: MyColors.textSecondary,
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           /// Horizontal Scrollable Pages

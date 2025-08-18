@@ -1,18 +1,17 @@
 
 class MyImages{
 
-  ///App Logos
+  ///App Logos/Icons
   static const String appLogo = "assets/logo/crunchies_logo-removebg-preview.png";
   static const String nigeriaFlag = "assets/logo/nigeria-flag.jpg";
   static const String telephone = "assets/logo/telephone.png";
   static const String location = "assets/icons/location-removebg-preview.png";
 
   ///Social Logos
-  // static const String instagram = "assets/logos/instagram_logo.png";
-  // static const String facebook = "assets/logos/facebook_icon.png";
-  // static const String linkedIn = "assets/logos/linkedin_logo.png";
-  // static const String tiktok = "assets/logos/tiktok_logo.png";
-  // static const String twitter = "assets/logos/twitter_logo.png";
+  static const String chatIcon = "assets/icons/chat_bubble-removebg-preview.png";
+  static const String emailIcon = "assets/icons/email_icon.png";
+  static const String phoneIcon = "assets/icons/green_phone_icon-removebg-preview.png";
+  static const String whatsappIcon = "assets/icons/whatsapp.png";
 
   /// Splash Screen
   static const String splashScreenImage1 = "assets/images/splash_screen/crunchies_splash1.jpg";
@@ -30,17 +29,30 @@ class MyImages{
   static const String onBoardingImage5 = "assets/images/onboarding/onboarding5.jpg";
 
   ///Random
-  static const String loyaltyImage = "assets/images/random/loyalty_image.jpg";
+  static const String loyaltyImage = "assets/images/random/loyalty_img.png";
+  //static const String loyaltyImage = "assets/images/random/loyalty_img-removebg-preview.png";
   static const String onTheCounter = "assets/images/random/crunchies_otc.jpg";
   static const String subImg = "assets/images/random/subscribe2.jpg";
 
-  ///Home Screen
+  ///Home Screen / All Icons
   static const String chickenLogo = "assets/logo/chicken_logo3.png";
   static const String shopLogo = "assets/icons/shop_icon-removebg-preview.png";
   static const String searchIcon = "assets/icons/search_icon-removebg-preview.png";
+  static const String plateIcon = "assets/icons/plate.png";
+  static const String flameIcon = "assets/flame_icon.png";
+  static const String copyIcon = "assets/icons/copy_icon.png";
+
 
   /// Home Body Category
   static const String categoryImg1 = "assets/icons/category/category_all-removebg-preview.png";
+  static const String categoryImg2 = "assets/icons/category/food-removebg-preview.png";
+  static const String categoryImg3 = "assets/icons/category/protein-removebg-preview.png";
+  static const String categoryImg4 = "assets/icons/category/pastry-removebg-preview.png";
+  static const String categoryImg5 = "assets/icons/category/cake-removebg-preview.png";
+  static const String categoryImg6 = "assets/icons/category/shawarma-removebg-preview.png";
+  static const String categoryImg7 = "assets/icons/category/bread-removebg-preview.png";
+  static const String categoryImg8 = "assets/icons/category/drinks-removebg-preview.png";
+  static const String categoryImg9 = "assets/icons/category/icecream-removebg-preview.png";
 
 
 

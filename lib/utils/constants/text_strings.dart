@@ -76,6 +76,86 @@ class MyTexts {
   static const String homeBodyHeading = "How may we delight you today?";
   static const String homeBodySubHeading = "Categories";
 
+  /// Offers Header
+  static const String offerHeading = "Offers";
+  static const String offerSubHeading = "Crunchies gives you the best offers to your delicious delight";
+  static const String offerPageViewTitle = "Hot deals!";
+
+  /// Offers Body
+  static const String offerBodyHeading = "Latest deals";
+  static const String offerBodySubHeading = "Here are some hot deals for you";
+  static const String offerBodyDescription1 = "Flex Meal - Fried/Beef/Plantain/Pet Coke";
+  static const String offerBodyPrice1 = "# 3,150";
+  static const String offerBodyDescription2 = "Flex Meal - Fried/Chicken/Salad/Pet Coke";
+  static const String offerBodyPrice2 = "# 3,150";
+  static const String offerBodyDescription3 = "Flex Meal - Jollof/Chicken/Salad/Pet Coke";
+  static const String offerBodyPrice3 = "# 3,150";
+  static const String offerBodyDiscount = "Discount";
+  static const String offerFooterTitle = "More offers";
+  static const String offerFooterSubTitle = "Get discount on our available meals here";
+
+
+  /// LoyaltyScreen Text
+  static const String loyaltyHeading = "Welcome to the";
+  static const String loyaltySubHeading = "Customer Loyalty Program! 🎉";
+  static const String loyaltyTitle = "Earn rewards every time you order your favorite meals! Here's how it works:";
+  static const String loyaltyBodyTitle1 = "Earn points";
+  static const String loyaltyBodySubTitle1 = " -Get points on every order made through the app or in a physical store.";
+  static const String loyaltyBodyTitle2 = "Unlock Rewards";
+  static const String loyaltyBodySubTitle2 = "-Redeem points for discounts, free meals, and exclusive deals.";
+  static const String loyaltyBodyTitle3 = "Get VIP Perks";
+  static const String loyaltyBodySubTitle3 = "-Enjoy special offers, birthday treats, and priority access to new menu items.";
+  static const String loyaltyBtn = "Get Started";
+
+
+
+  /// Support Screen Text
+  static const String supportHeading = "Support";
+  static const String supportSubHeading = "We are here to assist you any time. Reach out to us through any of our platform below";
+  static const String supportTitle1 = "Zee on Whatsapp";
+  static const String supportSubTitle1 = "+234 906 243 9146";
+  static const String supportTitle2 = "Email";
+  static const String supportSubTitle2 = "customercare@crunchiesonline.com";
+  static const String supportTitle3 = "Phone number";
+  static const String supportSubTitle3 = "+234 906 243 9146";
+  static const String supportTitle4 = "Phone number";
+  static const String supportSubTitle4 = "+234 916 998 2493";
+  static const String supportBtn = "Go to settings";
+
+
+
+  /// Setting Screen Text
+  static const String settingHeading = "Hey Bubae";
+  static const String settingSubHeading = "+2341234567890";
+  static const String settingSection1 = "My Account";
+  static const String settingTitle1 = "Profile";
+  static const String settingTitle2 = "Address";
+  static const String settingTitle3 = "My orders";
+  static const String settingTitle4 = "Loyalty";
+  static const String settingSection2 = "More";
+  static const String settingTitle5 = "Support";
+  static const String settingTitle6 = "About us";
+  static const String settingTitle7 = "Terms & Conditions";
+  static const String settingTitle8 = "Logout";
+  static const String settingTitle9 = "Delete Account";
+
+
+  /// Profile Screen Text
+  static const String profileHeadingLink = "Edit profile";
+
+
+
+  /// Search Meals Screen Text
+  static const String searchMealsHeader = "Search meals";
+  static const String searchMealsRecentSearch = "Recent search";
+  static const String searchMealsClearSearch = "Clear search history";
+  static const String searchMealsCenterTitle = "No recent search";
+  static const String searchMealsCenterSubTitle = "You have no recent search";
+  static const String searchMealsOptionHeader = "Popular search";
+
+
+  //////----------------unused---------------------///
+
   ///General Menu Page
   static const String bannerTitle1 = "Our Menu";
   static const String bannerSubTitle1 = "Crunchies Fried Chicken, Agbani Road, Enugu.";

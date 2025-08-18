@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator: any
   url_launcher: any
   intl: any
+  iconsax: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -49,7 +50,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-  flutter_native_splash: ^2.4.6intl: ^0.20.2url_launcher: ^6.3.2
+  flutter_native_splash: ^2.4.6
+  intl: ^0.20.2
+  url_launcher: ^6.3.2
+  font_awesome_flutter: ^10.9.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

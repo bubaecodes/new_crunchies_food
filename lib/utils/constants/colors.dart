@@ -11,6 +11,7 @@ class MyColors{
   static const Color accentFade = Color(0xFFC93030);
   //static const Color lightPinkBg = Color(0xFFFFE6EA);
   static const Color lightPinkBg = Color(0xFFFFECF2);
+  static const Color lighterPinkBg = Color(0xFFFFD1DC);
   static const Color pinkBg = Color(0xFFFFC0CB);
 
   ///General Colors
@@ -20,6 +21,7 @@ class MyColors{
   ///Background Container Colors
   static const Color lightContainer = Color(0xFFF6F6F6);
   static Color darkContainer = const Color(0xFFFFFFFF).withOpacity(0.1);
+  static const Color darkGreen = Color(0xFF004526);
 
 
   ///Neutral Shades
