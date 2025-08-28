@@ -63,7 +63,7 @@ class MyTexts {
   ///Set Location Screen
   static const String setLocationHeading = "Set location";
   static const String setLocationSubheading = "Searching for closest outlet to you...";
-  static const String setLocationSearch = "Closest outlet to you";
+  static const String setLocationSearch = "Closest outlet to you...";
 
   /// Home Screen AppBar
   static const String homeAppBarHeading = "Good afternoon, Bubae.";
@@ -123,6 +123,22 @@ class MyTexts {
   static const String supportBtn = "Go to settings";
 
 
+  /// Cart Screen Text
+  static const String cartHeader = "Cart";
+  static const String cartHeaderLink = "Order history";
+  static const String cartSubHeader = "Meal in your cart are here. Check out to have them delivered to you.";
+  static const String cartAmount = "Total Amount";
+  static const String cartAddMore = "Add more to your crunch...";
+  static const String cartBtn = "Proceed to checkout";
+  static const String cartAddToCart = "Add to cart";
+
+
+  /// Checkout Screen Text
+  static const String checkoutHeader = "Checkout";
+  static const String checkoutSubHeader = "Check out to have them delivered to you.";
+  static const String checkoutTitle1 = "Who are you ordering for?";
+  static const String checkoutRequired = "Required";
+
 
   /// Setting Screen Text
   static const String settingHeading = "Hey Bubae";
@@ -152,6 +168,9 @@ class MyTexts {
   static const String searchMealsCenterTitle = "No recent search";
   static const String searchMealsCenterSubTitle = "You have no recent search";
   static const String searchMealsOptionHeader = "Popular search";
+
+  /// Selected Meals Screen Text
+  static const String selectedMealsHeader = "Put an extra to the delicious...";
 
 
   //////----------------unused---------------------///
