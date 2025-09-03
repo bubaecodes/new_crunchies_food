@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
+import 'package:new_crunchies_food/features/personalization/controllers/profile_controller/profile_appbar_btn_controller.dart';
 import 'package:new_crunchies_food/features/personalization/screens/settings/setting_screen.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/image_strings.dart';
@@ -12,6 +13,7 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ProfileAppbarBtnController());
     return Column(
       children: [
         Row(
@@ -24,15 +26,20 @@ class ProfileHeader extends StatelessWidget {
               ],
             ),
             TextButton(
-              onPressed: (){},
-              child: Text(
-                MyTexts.profileHeadingLink,
-                style: TextStyle(
+              onPressed: (){
+                controller.toggleText();
+              },
+              child: Obx(
+                ()=> Text(
+                  //MyTexts.profileHeadingLink,
+                  controller.isToggle.value ? 'Cancel' : 'Edit profile',
+                  style: TextStyle(
                     fontVariations: [FontVariation.weight(600)],
                     fontFamily: 'Manrope',
                     fontSize: 13,
                     decoration: TextDecoration.underline,
                     color: MyColors.primary
+                  ),
                 ),
               ),
             )

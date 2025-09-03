@@ -16,12 +16,12 @@ class MyTextbtn extends StatelessWidget {
         child: Text(
           MyTexts.locationSupportLink,
           style: TextStyle(
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.red,
-              fontSize: 13,
-              color: MyColors.secondary,
-              fontVariations: [FontVariation.weight(800)],
-              fontFamily: 'Manrope'
+            decoration: TextDecoration.underline,
+            decorationColor: Colors.red,
+            fontSize: 13,
+            color: MyColors.secondary,
+            fontVariations: [FontVariation.weight(800)],
+            fontFamily: 'Manrope'
           ),
         ),
       ),

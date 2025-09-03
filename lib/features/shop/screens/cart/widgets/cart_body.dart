@@ -15,8 +15,8 @@ class CartBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsetsGeometry.only(
-              left: MySizes.md + 3,
-              right: MySizes.md + 3
+            left: MySizes.md + 3,
+            right: MySizes.md + 3
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,6 +27,7 @@ class CartBody extends StatelessWidget {
                 fontSize: 15,
                 color: MyColors.darkerGrey,
               ),
+              SizedBox(height: MySizes.sm + 5),
               CartMealContainer(),
               SizedBox(height: MySizes.sm),
               Divider(),

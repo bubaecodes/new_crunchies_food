@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:new_crunchies_food/common/styles/my_home_padding.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
+import 'package:new_crunchies_food/features/personalization/screens/address/address_screen.dart';
+import 'package:new_crunchies_food/features/personalization/screens/orders/orders_screen.dart';
 import 'package:new_crunchies_food/features/personalization/screens/profile/profile.dart';
 import 'package:new_crunchies_food/features/personalization/screens/settings/widgets/settings_appbar.dart';
 import 'package:new_crunchies_food/features/personalization/screens/settings/widgets/settings_body.dart';
@@ -27,20 +29,26 @@ class SettingScreen extends StatelessWidget {
             SizedBox(height: MySizes.sm),
             SettingsAppbar(),
             SizedBox(height: MySizes.md + 10),
+            ///settings title
             MyText(
               title: MyTexts.settingSection1,
               fontVariation: FontVariation.weight(700),
               fontSize: 14.2,
               color: MyColors.darkerGrey,
             ),
-            SettingsBody(onPressed: () => Get.to(ProfileScreen()), icon: Iconsax.user, text: MyTexts.settingTitle1, navIcon: Icons.chevron_right),
+            ///profile
+            SettingsBody(onPressed: () => Get.to(()=> ProfileScreen()), icon: Iconsax.user, text: MyTexts.settingTitle1, navIcon: Icons.chevron_right),
             SizedBox(height: MySizes.xs - 2),
-            SettingsBody(onPressed: () {  }, icon: Iconsax.location, text: MyTexts.settingTitle2, navIcon: Icons.chevron_right),
+            ///address
+            SettingsBody(onPressed: () => Get.to(()=> AddressScreen()), icon: Iconsax.location, text: MyTexts.settingTitle2, navIcon: Icons.chevron_right),
             SizedBox(height: MySizes.xs - 2),
-            SettingsBody(onPressed: () {  }, icon: Iconsax.shopping_cart, text: MyTexts.settingTitle3, navIcon: Icons.chevron_right),
+            ///my orders
+            SettingsBody(onPressed: ()=> Get.to(()=> OrdersScreen()), icon: Iconsax.shopping_cart, text: MyTexts.settingTitle3, navIcon: Icons.chevron_right),
             SizedBox(height: MySizes.xs - 2),
-            SettingsBody(onPressed: () => Get.to(LoyaltyScreen()), icon: Iconsax.discount_shape, text: MyTexts.settingTitle4, navIcon: Icons.chevron_right),
+            ///loyalty
+            SettingsBody(onPressed: () => Get.to(()=> LoyaltyScreen()), icon: Iconsax.discount_shape, text: MyTexts.settingTitle4, navIcon: Icons.chevron_right),
             SizedBox(height: MySizes.md),
+            ///settings subtitle
             MyText(
               title: MyTexts.settingSection2,
               fontVariation: FontVariation.weight(700),
@@ -48,14 +56,19 @@ class SettingScreen extends StatelessWidget {
               color: MyColors.darkerGrey,
             ),
             SizedBox(height: MySizes.xs),
+            ///support
             SettingsBody(onPressed: () =>Get.to(SupportScreen()), icon: Iconsax.message, text: MyTexts.settingTitle5, navIcon: Icons.chevron_right),
             SizedBox(height: MySizes.xs - 2),
+            ///about us
             SettingsBody(onPressed: () {  }, icon: Iconsax.warning_2, text: MyTexts.settingTitle6, navIcon: Icons.chevron_right),
             SizedBox(height: MySizes.xs - 2),
+            ///terms and conditions
             SettingsBody(onPressed: () {  }, icon: Iconsax.book, text: MyTexts.settingTitle7, navIcon: Icons.chevron_right),
             SizedBox(height: MySizes.xs - 2),
+            ///logout
             SettingsBody(onPressed: () {  }, icon: Iconsax.logout, text: MyTexts.settingTitle8),
             SizedBox(height: MySizes.xs - 2),
+            ///delete account
             SettingsBody(onPressed: () {  }, icon: Iconsax.trash, text: MyTexts.settingTitle9, color: MyColors.primary),
             SizedBox(height: MySizes.xs - 2),
           ],

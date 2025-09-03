@@ -13,6 +13,7 @@ class MyColors{
   static const Color lightPinkBg = Color(0xFFFFECF2);
   static const Color lighterPinkBg = Color(0xFFFFD1DC);
   static const Color pinkBg = Color(0xFFFFC0CB);
+  static const Color yellowBg = Color(0xFFFFF9C4);
 
   ///General Colors
   static const Color textPrimary = Color(0xFF000000);

@@ -14,19 +14,20 @@ class SupportBtn extends StatelessWidget {
       onPressed: () => Get.to(SettingScreen()),
       style: ButtonStyle(
         backgroundColor: WidgetStatePropertyAll(MyColors.lighterPinkBg),
+        elevation: WidgetStatePropertyAll(0),
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: MyColors.lightPinkBg),
-            ),
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            side: BorderSide(color: MyColors.lightPinkBg),
+          ),
         ),
         padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 133, vertical: 17)),
       ),
       child: MyText(
-          title: MyTexts.supportBtn,
-          fontVariation: FontVariation.weight(700),
-          color: MyColors.primary,
-          fontSize: 15
+        title: MyTexts.supportBtn,
+        fontVariation: FontVariation.weight(700),
+        color: MyColors.primary,
+        fontSize: 15
       ),
     );
   }

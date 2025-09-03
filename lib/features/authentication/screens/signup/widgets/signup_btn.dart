@@ -19,9 +19,9 @@ class SignupBtn extends StatelessWidget {
           backgroundColor: WidgetStateProperty.all(MyColors.primary),
           borderSide: BorderSide(color: MyColors.secondary),
           child: MyText(
-              title: MyTexts.signupBtn,
-              fontVariation: FontVariation.weight(900),
-              fontSize: 14,
+            title: MyTexts.signupBtn,
+            fontVariation: FontVariation.weight(900),
+            fontSize: 14,
             color: Colors.white,
           )
         ),

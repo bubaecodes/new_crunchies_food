@@ -137,6 +137,8 @@ class MyTexts {
   static const String checkoutHeader = "Checkout";
   static const String checkoutSubHeader = "Check out to have them delivered to you.";
   static const String checkoutTitle1 = "Who are you ordering for?";
+  static const String checkoutTitle2 = "Packaging type";
+  static const String checkoutTitle3 = "Order mode";
   static const String checkoutRequired = "Required";
 
 
@@ -158,6 +160,40 @@ class MyTexts {
 
   /// Profile Screen Text
   static const String profileHeadingLink = "Edit profile";
+
+
+  /// Address Screen Text
+  static const String addressAppbarText = "Address";
+  static const String addressHeading = "We use your location to find the closest outlet to serve you.";
+  static const String addressBodyTitle = "No address";
+  static const String addressBodySubTitle = "You have not added a location yet";
+  static const String addressBodyTextLink = "Add new address";
+
+
+  /// Add address Screen Text
+  static const String addAddressHeading = "Enter delivery location";
+  static const String addAddressSubHeading = "We use your location to deliver smoothly to you";
+  static const String addAddressBodyText = "Ensure that your delivery location is within Crunchies Fried Chicken, 262 Agbani Road, Enugu. As you maybe required to pay extra fees for delivery to farther locations.";
+  static const String addAddressButtonText = "Set address";
+
+  /// Added address list Screen Text
+  static const String addedAddressListHeading = addressAppbarText;
+  static const String addedAddressListTextLink = addressBodyTextLink;
+  static const String addedAddressListSubHeading = "We use your location to find the closest outlet to serve you.";
+
+
+
+  /// Order Screen Text
+  static const String ordersScreenHeader = "Your Orders";
+  static const String ordersScreenSubHeader = "All Orders";
+  static const String ordersScreenBtnText1 = "Get Help";
+  static const String ordersScreenBtnText2 = "Reorder";
+
+  /// Order Details Screen Text
+  static const String orderDetailsScreenTextBtn = ordersScreenBtnText2;
+  static const String orderDetailsScreenHeader = "Order details";
+  static const String orderDetailsScreenSubHeader = "Item details";
+  static const String orderDetailsScreenFooter = "Total Amount";
 
 
 

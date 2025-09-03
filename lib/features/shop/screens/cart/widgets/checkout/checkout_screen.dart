@@ -25,6 +25,7 @@ class CheckoutScreen extends StatelessWidget {
           ),
           /// header
           CheckoutHeader(),
+          SizedBox(height: MySizes.sm + 5),
 
           /// body
           CheckoutBody(),

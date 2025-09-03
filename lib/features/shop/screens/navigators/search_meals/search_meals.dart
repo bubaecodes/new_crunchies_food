@@ -28,6 +28,7 @@ class SearchMeals extends StatelessWidget {
                 fontVariation: FontVariation.weight(700),
                 fontSize: 16,
               ),
+              SizedBox(height: MySizes.md - 5),
               SearchMealsProduct()
             ],
           ),
