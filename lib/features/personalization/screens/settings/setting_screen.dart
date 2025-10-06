@@ -9,6 +9,7 @@ import 'package:new_crunchies_food/features/personalization/screens/settings/wid
 import 'package:new_crunchies_food/features/personalization/screens/settings/widgets/settings_body.dart';
 import 'package:new_crunchies_food/features/shop/screens/loyalty/loyalty_screen.dart';
 import 'package:new_crunchies_food/features/shop/screens/support/support_screen.dart';
+import 'package:new_crunchies_food/navigation_menu.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
@@ -25,7 +26,7 @@ class SettingScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            IconButton(onPressed: () => Get.to(SupportScreen()), icon: Icon(Icons.chevron_left, size: 35)),
+            IconButton(onPressed: () => Get.to(MyBottomNav()), icon: Icon(Icons.chevron_left, size: 35)),
             SizedBox(height: MySizes.sm),
             SettingsAppbar(),
             SizedBox(height: MySizes.md + 10),

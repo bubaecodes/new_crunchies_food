@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
+import 'package:new_crunchies_food/navigation_menu.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
@@ -20,7 +22,8 @@ class CheckoutBtn extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: MySizes.md, vertical: MySizes.sm + 5),
         child: ElevatedButton(
           //onPressed: () => Get.to(CheckoutScreen()),
-          onPressed: (){},
+          onPressed: () => Get.to(MyBottomNav()),
+          //onPressed: (){},
           style: ButtonStyle(
             backgroundColor: WidgetStatePropertyAll(MyColors.primary),
             elevation: WidgetStatePropertyAll(15),

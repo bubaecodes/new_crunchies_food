@@ -10,6 +10,8 @@ import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
 
+import '../../../../../navigation_menu.dart';
+
 class SelectedMealScreen extends StatelessWidget {
   const SelectedMealScreen({super.key});
 
@@ -29,7 +31,8 @@ class SelectedMealScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(onPressed: () => Get.to(SearchMeals()), icon: Icon(Icons.chevron_left, size: 35)),
+              //IconButton(onPressed: () => Get.to(SearchMeals()), icon: Icon(Icons.chevron_left, size: 35)),
+              IconButton(onPressed: () => Get.to(MyBottomNav()), icon: Icon(Icons.chevron_left, size: 35)),
               SizedBox(height: MySizes.sm),
               SelectedMealThumbnail(),
               SizedBox(height: MySizes.md),

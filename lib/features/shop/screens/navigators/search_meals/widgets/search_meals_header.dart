@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
-import 'package:new_crunchies_food/features/shop/screens/home/home_screen.dart';
+import 'package:new_crunchies_food/navigation_menu.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
 import 'package:iconsax/iconsax.dart';
@@ -15,7 +15,7 @@ class SearchMealsHeader extends StatelessWidget {
       children: [
         Row(
           children: [
-            IconButton(onPressed: () => Get.to(HomeScreen()), icon: Icon(Icons.chevron_left, size: 35)),
+            IconButton(onPressed: () => Get.to(MyBottomNav()), icon: Icon(Icons.chevron_left, size: 35)),
             MyText(
               title: MyTexts.searchMealsHeader,
               fontVariation: FontVariation.weight(800),
