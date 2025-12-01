@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:new_crunchies_food/common/styles/my_home_padding.dart';
+import 'package:new_crunchies_food/features/shop/models/meal_product_model.dart';
 import 'package:new_crunchies_food/features/shop/screens/cart/cart_screen.dart';
 import 'package:new_crunchies_food/features/shop/screens/home/widgets/home_body/home_body_product.dart';
 import 'package:new_crunchies_food/features/shop/screens/navigators/search_meals/search_meals.dart';
@@ -13,12 +14,14 @@ import 'package:new_crunchies_food/utils/constants/text_strings.dart';
 import '../../../../../navigation_menu.dart';
 
 class SelectedMealScreen extends StatelessWidget {
-  const SelectedMealScreen({super.key});
+  final MealProductModel meal;
+  const SelectedMealScreen({super.key, required this.meal});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      /// cart floating btn
       floatingActionButton: FloatingActionButton(
         onPressed: () => Get.to(CartScreen()),
         backgroundColor: MyColors.primary,
@@ -34,8 +37,9 @@ class SelectedMealScreen extends StatelessWidget {
               //IconButton(onPressed: () => Get.to(SearchMeals()), icon: Icon(Icons.chevron_left, size: 35)),
               IconButton(onPressed: () => Get.to(MyBottomNav()), icon: Icon(Icons.chevron_left, size: 35)),
               SizedBox(height: MySizes.sm),
-              SelectedMealThumbnail(),
+              SelectedMealThumbnail(meal: meal),
               SizedBox(height: MySizes.md),
+              /// search row
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

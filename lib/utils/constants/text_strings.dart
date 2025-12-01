@@ -66,10 +66,10 @@ class MyTexts {
   static const String setLocationSearch = "Closest outlet to you...";
 
   /// Home Screen AppBar
-  static const String homeAppBarHeading = "Good afternoon, Bubae.";
-  static const String homeAppBarSubHeading = "It's time for lunch - Taste the difference!";
+  //static const String homeAppBarHeading = "Good afternoon, Bubae.";
+  //static const String homeAppBarSubHeading = "It's time for lunch - Taste the difference!";
+  //static const String homeContainerSubHeading = "Crunchies Fried Chicken, 262 Agbani Road, Enugu.";
   static const String homeContainerHeading = "Ordering from:";
-  static const String homeContainerSubHeading = "Crunchies Fried Chicken, 262 Agbani Road, Enugu.";
   static const String homeAppBarTextBtn = "Having issues?";
 
   /// Home Screen Body Heading
@@ -155,6 +155,7 @@ class MyTexts {
   static const String settingTitle6 = "About us";
   static const String settingTitle7 = "Terms & Conditions";
   static const String settingTitle8 = "Logout";
+  static const String settingTitle10 = "Upload Dummy";
   static const String settingTitle9 = "Delete Account";
 
 

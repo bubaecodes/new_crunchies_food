@@ -16,58 +16,59 @@ class LocationOutletForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     return Form(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                MyText(
-                  title: MyTexts.locationOutlet,
-                  fontVariation: FontVariation.weight(800),
-                  fontSize: 14
-                ),
-              ],
-            ),
-            SizedBox(height: MySizes.sm),
-            DropdownButtonFormField(
-              padding: EdgeInsets.only(bottom: MySizes.md - 10),
-              decoration: InputDecoration(
-                labelText: 'Select your outlet',
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  borderSide: BorderSide(color: MyColors.darkerGrey, width: 1.7),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  borderSide: BorderSide(color: MyColors.darkerGrey, width: 1.7),
-                ),
+      /// key: controller.locationFormKey,
+      child: Column(
+        children: [
+          Row(
+            children: [
+              MyText(
+                title: MyTexts.locationOutlet,
+                fontVariation: FontVariation.weight(800),
+                fontSize: 14
               ),
-              value: controller.selectedOutlet.value,
-              items: controller.outlet.map((String value) {
-                return DropdownMenuItem(
-                  value: value,
-                  //child: MyText(title: value, fontVariation: FontVariation.weight(800), fontSize: 15),
-                  child: SizedBox(
-                    width: screenWidth * 0.74,
-                    child: Text(
-                      value,
-                      softWrap: true,
-                      overflow: TextOverflow.visible,
-                      maxLines: 2,
-                      style: TextStyle(
-                        fontVariations: [FontVariation.weight(800)],
-                        fontSize: 14,
-                        fontFamily: 'Manrope'
-                      ),
+            ],
+          ),
+          SizedBox(height: MySizes.sm),
+          DropdownButtonFormField(
+            padding: EdgeInsets.only(bottom: MySizes.md - 10),
+            decoration: InputDecoration(
+              labelText: 'Select your outlet',
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderSide: BorderSide(color: MyColors.darkerGrey, width: 1.7),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderSide: BorderSide(color: MyColors.darkerGrey, width: 1.7),
+              ),
+            ),
+            value: controller.selectedOutlet.value,
+            items: controller.outlet.map((String value) {
+              return DropdownMenuItem(
+                value: value,
+                //child: MyText(title: value, fontVariation: FontVariation.weight(800), fontSize: 15),
+                child: SizedBox(
+                  width: screenWidth * 0.74,
+                  child: Text(
+                    value,
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
+                    maxLines: 2,
+                    style: TextStyle(
+                      fontVariations: [FontVariation.weight(800)],
+                      fontSize: 14,
+                      fontFamily: 'Manrope'
                     ),
                   ),
-                );
-              }).toList(),
-              onChanged: controller.selectedOutlet.call,
-              validator: (value) =>
-              value == null ? 'Please select an option' : null,
-            )
-          ],
-        )
+                ),
+              );
+            }).toList(),
+            onChanged: controller.selectedOutlet.call,
+            validator: (value) =>
+            value == null ? 'Please select an option' : null,
+          )
+        ],
+      )
     );
   }
 }

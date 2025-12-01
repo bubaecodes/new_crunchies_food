@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:new_crunchies_food/features/shop/controllers/cart_controllers/cart_controller.dart';
 import 'package:new_crunchies_food/features/shop/screens/cart/cart_screen.dart';
 import 'package:new_crunchies_food/features/shop/screens/home/home_screen.dart';
 import 'package:new_crunchies_food/features/shop/screens/loyalty/loyalty_screen.dart';
@@ -83,38 +84,82 @@ class MyBottomNav extends StatelessWidget {
                 ),
 
                 /// FloatingActionButton (Cart item)
+                // InkWell(
+                //   onTap: () => controller.selectedIndex.value = 2,
+                //   customBorder: const CircleBorder(),
+                //   child: Stack(
+                //     children: [
+                //       IconButton(
+                //           onPressed: () => Get.to(() => CartScreen()),
+                //           icon: Icon(Iconsax.shopping_cart, size: 29, color: MyColors.darkerGrey)
+                //       ),
+                //       Positioned(
+                //         right: 0,
+                //         child: Container(
+                //           width: 18,
+                //           height: 18,
+                //           decoration: BoxDecoration(
+                //             color: MyColors.primary,
+                //             borderRadius: BorderRadius.circular(100),
+                //           ),
+                //           child: Center(
+                //             child: Text(
+                //               '1',
+                //               style: Theme.of(context)
+                //                   .textTheme
+                //                   .labelLarge!
+                //                   .apply(color: MyColors.white, fontSizeFactor: 0.8),
+                //             ),
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 InkWell(
                   onTap: () => controller.selectedIndex.value = 2,
                   customBorder: const CircleBorder(),
                   child: Stack(
                     children: [
                       IconButton(
-                          onPressed: () => Get.to(() => CartScreen()),
-                          icon: Icon(Iconsax.shopping_cart, size: 29, color: MyColors.darkerGrey)
+                        onPressed: () => Get.to(() => CartScreen()),
+                        icon: Icon(Iconsax.shopping_cart, size: 29, color: MyColors.darkerGrey),
                       ),
+
                       Positioned(
                         right: 0,
-                        child: Container(
-                          width: 18,
-                          height: 18,
-                          decoration: BoxDecoration(
-                            color: MyColors.primary,
-                            borderRadius: BorderRadius.circular(100),
-                          ),
-                          child: Center(
-                            child: Text(
-                              '1',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .labelLarge!
-                                  .apply(color: MyColors.white, fontSizeFactor: 0.8),
+                        child: Obx(() {
+                          final itemCount = CartController.instance.cartItems.length; // number of items
+                          //if (itemCount == 0) return SizedBox();
+                          if (itemCount == 0) {
+                            return IconButton(
+                              onPressed: () => Get.to(() => CartScreen()),
+                              icon: Icon(Iconsax.shopping_cart, size: 29, color: MyColors.darkerGrey)
+                            );
+                          }
+                          return Container(
+                            width: 18,
+                            height: 18,
+                            decoration: BoxDecoration(
+                              color: MyColors.primary,
+                              borderRadius: BorderRadius.circular(100),
                             ),
-                          ),
-                        ),
+                            child: Center(
+                              child: Text(
+                                '$itemCount', // dynamically show count
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .labelLarge!
+                                    .apply(color: MyColors.white, fontSizeFactor: 0.8),
+                              ),
+                            ),
+                          );
+                        }),
                       ),
                     ],
                   ),
                 ),
+
 
                 /// Fourth item
                 GestureDetector(

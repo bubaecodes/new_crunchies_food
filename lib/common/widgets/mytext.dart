@@ -7,7 +7,8 @@ class MyText extends StatelessWidget {
     required this.fontVariation,
     required this.fontSize,
     this.color,
-    this.textDecoration
+    this.textDecoration,
+    this.overflow,
   });
 
   final String title;
@@ -15,17 +16,20 @@ class MyText extends StatelessWidget {
   final double fontSize;
   final Color? color;
   final TextDecoration? textDecoration;
+  final TextOverflow? overflow;
+  //final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
+      overflow: overflow,
       style: TextStyle(
         fontVariations: [fontVariation],
         color: color,
         fontSize: fontSize,
         fontFamily: "Manrope",
-        decoration: textDecoration
+        decoration: textDecoration,
       ),
     );
   }

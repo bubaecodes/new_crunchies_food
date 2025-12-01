@@ -14,7 +14,7 @@
 //   static const checkout = '/checkout';
 //   static const cart = '/cart';
 //   static const brand = '/brand';
-//   static const allProducts = '/all-products';
+//   static const allProducts = '/all-product';
 //   static const userProfile = '/user-profile';
 //   static const userAddress = '/use-address';
 //   static const signup = '/signup';

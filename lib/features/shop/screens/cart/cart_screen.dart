@@ -18,7 +18,7 @@ class CartScreen extends StatelessWidget {
           CartHeader(),
 
           /// scrollable part of column
-          CartBody(),
+          Expanded(child: CartBody()),
 
           /// static btn
           CartBtn(),

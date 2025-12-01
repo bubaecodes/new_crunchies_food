@@ -32,12 +32,6 @@ class LoyaltyBody extends StatelessWidget {
         LoyaltyCheckbox(title: MyTexts.loyaltyBodyTitle2, subTitle: MyTexts.loyaltyBodySubTitle2),
         SizedBox(height: MySizes.lg),
         LoyaltyBtn()
-        // MyButton(
-        //   onpressed: (){},
-        //   child: MyText(title: MyTexts.loyaltyBtn, fontVariation: FontVariation.weight(800), fontSize: 15),
-        //   backgroundColor: WidgetStateProperty.all(MyColors.primary),
-        //   borderSide: WidgetStateProperty.all()
-        // )
       ],
     );
   }

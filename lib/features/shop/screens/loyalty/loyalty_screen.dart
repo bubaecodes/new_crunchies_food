@@ -11,14 +11,16 @@ class LoyaltyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: MyHomePadding(
-        child: Column(
-          children: [
-            LoyaltyThumbnail(),
-            SizedBox(height: MySizes.md * 2.5),
-            LoyaltyBody()
-          ],
-        )
+      body: SingleChildScrollView(
+        child: MyHomePadding(
+          child: Column(
+            children: [
+              LoyaltyThumbnail(),
+              SizedBox(height: MySizes.md * 2),
+              LoyaltyBody()
+            ],
+          )
+        ),
       ),
     );
   }

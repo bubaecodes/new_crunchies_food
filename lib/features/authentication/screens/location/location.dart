@@ -23,17 +23,17 @@ class LocationScreen extends StatelessWidget {
             Column(
               children: [
                 LocationHeading(),
-                SizedBox(height: MySizes.lg * 2),
+                SizedBox(height: MySizes.lg),
                 LocationThumbnail(),
-                SizedBox(height: MySizes.lg * 3),
+                SizedBox(height: MySizes.lg),
                 LocationForm(),
-                SizedBox(height: MySizes.lg),
+                SizedBox(height: MySizes.md - 5),
                 LocationCityForm(),
-                SizedBox(height: MySizes.lg),
+                SizedBox(height: MySizes.md - 5),
                 LocationOutletForm(),
-                SizedBox(height: MySizes.lg),
+                SizedBox(height: MySizes.md),
                 LocationBtn(),
-                SizedBox(height: MySizes.xl * 3.5),
+                SizedBox(height: MySizes.xl),
               ],
             ),
             Positioned(

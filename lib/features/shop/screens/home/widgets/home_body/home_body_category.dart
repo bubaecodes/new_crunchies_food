@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_crunchies_food/features/shop/controllers/home_controller/hb_category_controller.dart';
+import 'package:new_crunchies_food/features/shop/controllers/home_controller/home_dummy/category_dummy_controller.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:get/get.dart';
@@ -10,19 +10,19 @@ class HomeBodyCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final categoryController = Get.put(HbCategoryController());
+    //final categoryController = Get.put(HbCategoryController());
+    final categoryDummyController = Get.put(CategoryDummyController());
     return SizedBox(
-      // Give the horizontal ListView a fixed height
       height: 100,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: categoryController.categoryData.length,
+        itemCount: categoryDummyController.categoryData.length,
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: () => categoryController.updateBorderIndex(index),
+            onTap: () => categoryDummyController.updateBorderIndex(index),
             child: Obx(
               () {
-                final isSelected = index == categoryController.selectedIndex.value;
+                final isSelected = index == categoryDummyController.selectedIndex.value;
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: MySizes.sm),
                   child: Container(
@@ -40,7 +40,7 @@ class HomeBodyCategory extends StatelessWidget {
                           child: SizedBox(
                             width: 25,
                             height: 25,
-                            child: Image.asset(categoryController.categoryData[index]['image']!)
+                            child: Image.asset(categoryDummyController.categoryData[index]['image']!)
                           ),
                         ),
                         SizedBox(height: MySizes.xs + 4),
@@ -51,7 +51,7 @@ class HomeBodyCategory extends StatelessWidget {
                             color: MyColors.pinkBg,
                             child: Center(
                               child: Text(
-                                categoryController.categoryData[index]['name']!,
+                                categoryDummyController.categoryData[index]['name']!,
                                 style: TextStyle(
                                   fontFamily: 'Manrope',
                                   fontSize: 10.7,

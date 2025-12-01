@@ -11,7 +11,7 @@ class LoyaltyThumbnail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only( top: MySizes.lg * 3.5),
+      padding: const EdgeInsets.only( top: MySizes.lg * 1.5),
       child: Center(
         child: Container(
           decoration: BoxDecoration(

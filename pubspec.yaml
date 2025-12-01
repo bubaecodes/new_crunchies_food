@@ -35,11 +35,24 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
-  get: any
-  smooth_page_indicator: any
-  url_launcher: any
-  intl: any
-  iconsax: any
+  get: ^4.7.2
+  smooth_page_indicator: ^1.2.1
+  url_launcher: ^6.3.2
+  intl: ^0.20.2
+  iconsax: ^0.0.8
+  get_storage: ^2.1.1
+  flutter_native_splash: ^2.4.6
+  firebase_core: ^4.1.1
+  firebase_auth: ^6.1.0
+  cloud_firestore: ^6.0.2
+  connectivity_plus: ^7.0.0
+  http: ^1.5.0
+  logger: ^2.6.1
+  shimmer: ^3.0.0
+  firebase_storage: ^13.0.3
+  image_picker: ^1.2.0
+  cached_network_image: ^3.4.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -50,9 +63,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-  flutter_native_splash: ^2.4.6
-  intl: ^0.20.2
-  url_launcher: ^6.3.2
   font_awesome_flutter: ^10.9.0
 
 # For information on the generic Dart part of this file, see the
@@ -70,9 +80,9 @@ flutter:
   assets:
     - assets/logo/
     - assets/icons/
-    - assets/icons/category/
+    - assets/icons/category_icons/
     - assets/images/banners/
-    - assets/images/products/
+    - assets/images/product/
     - assets/images/random/
     - assets/images/splash_screen/
     - assets/images/onboarding/

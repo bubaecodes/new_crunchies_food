@@ -27,7 +27,7 @@ class SignupThumbnail extends StatelessWidget {
             color: MyColors.pinkBg,
             shape: BoxShape.circle,
             image: DecorationImage(
-              image: AssetImage(MyImages.appLogo),
+              image: AssetImage(MyImages.appLogo2),
               fit: BoxFit.none,
               scale: 4.0,
               alignment: Alignment.center

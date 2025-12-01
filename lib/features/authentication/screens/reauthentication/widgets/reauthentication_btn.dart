@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_crunchies_food/features/authentication/screens/location/location.dart';
+import 'package:new_crunchies_food/features/authentication/controllers/reauthenticate/reauthenticate_controller.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:get/get.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
@@ -9,8 +9,9 @@ class ReauthenticationBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ReauthenticateController());
     return ElevatedButton(
-      onPressed: () => Get.to(() => LocationScreen()),
+      onPressed: () => controller.reAuthenticate(),
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(MyColors.primary),
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(

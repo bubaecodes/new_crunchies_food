@@ -26,7 +26,7 @@ class MyButton extends StatelessWidget {
                 side: borderSide
             )
         ),
-        padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 149, vertical: 17)),
+        padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 123, vertical: 14)),
       ),
       child: child
     );

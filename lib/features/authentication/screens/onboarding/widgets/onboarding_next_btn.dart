@@ -15,7 +15,7 @@ class OnBoardingNextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(OnBoardingController());
     return Positioned(
-      bottom: MyDeviceUtils.getBottomNavigationBarHeight() + 10,
+      bottom: MyDeviceUtils.getBottomNavigationBarHeight() - 22,
       //bottom: 75,
       right: MySizes.defaultSpace,
       child: TextButton(

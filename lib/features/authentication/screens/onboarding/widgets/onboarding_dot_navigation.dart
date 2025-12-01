@@ -14,13 +14,15 @@ class OnBoardingDotNavigation extends StatelessWidget {
     final controller = OnBoardingController.instance;
     return Positioned(
       //bottom: MyDeviceUtils.getBottomNavigationBarHeight() + 55,
-      bottom: 160,
+      bottom: 100,
       left: 167,
-      child: SmoothPageIndicator(
-        controller: controller.pageController,
-        onDotClicked: controller.dotNavigationClick,
-        count: 4,
-        effect: const JumpingDotEffect(activeDotColor: MyColors.primary, dotColor: MyColors.darkGrey, dotHeight: 5, dotWidth: 17),
+      child: Center(
+        child: SmoothPageIndicator(
+          controller: controller.pageController,
+          onDotClicked: controller.dotNavigationClick,
+          count: 4,
+          effect: const JumpingDotEffect(activeDotColor: MyColors.primary, dotColor: MyColors.darkGrey, dotHeight: 5, dotWidth: 17),
+        ),
       ),
     );
   }

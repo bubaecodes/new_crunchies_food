@@ -10,8 +10,8 @@ class MyPadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-        left: MySizes.md + 7,
-        right: MySizes.md + 7,
+        left: MySizes.md + 2,
+        right: MySizes.md + 2,
         bottom: MySizes.md,
         top: MySizes.lg + 30,
       ),

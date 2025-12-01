@@ -2,12 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 
 class SupportContactOption extends StatelessWidget {
-  const SupportContactOption({super.key, required this.image, required this.title, required this.subTitle, this.icon});
+  const SupportContactOption({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    this.ontap,
+    this.icon,
+    this.copyTap,
+  });
 
   final String image;
   final String title;
   final String subTitle;
   final IconData? icon;
+  final VoidCallback? ontap;
+  final VoidCallback? copyTap;
 
   @override
   Widget build(BuildContext context) {
@@ -27,36 +37,39 @@ class SupportContactOption extends StatelessWidget {
               child: Image.asset(image, width: 20, height: 20)
             ),
             SizedBox(width: MySizes.md),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontFamily: 'Manrope',
-                    fontVariations: [FontVariation.weight(600)],
-                    fontSize: 13,
-                    //decoration: TextDecoration.underline
-                  ),
-                ),
-                Text(
-                  subTitle,
-                  style: TextStyle(
+            GestureDetector(
+              onTap: ontap,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
                       fontFamily: 'Manrope',
-                      fontVariations: [FontVariation.weight(900)],
-                      fontSize: 14,
-                      decoration: TextDecoration.underline,
-                      color: Colors.black
+                      fontVariations: [FontVariation.weight(600)],
+                      fontSize: 13,
+                      //decoration: TextDecoration.underline
+                    ),
                   ),
-                ),
-              ],
+                  Text(
+                    subTitle,
+                    style: TextStyle(
+                        fontFamily: 'Manrope',
+                        fontVariations: [FontVariation.weight(900)],
+                        fontSize: 14,
+                        decoration: TextDecoration.underline,
+                        color: Colors.black
+                    ),
+                  ),
+                ],
+              ),
             ),
             //Image.asset(MyImages.copyIcon, width: 20, height: 20),
           ],
         ),
         Row(
           children: [
-            GestureDetector(onTap: () {}, child: Icon(icon, color: Colors.red, size: 28))
+            GestureDetector(onTap: copyTap, child: Icon(icon, color: Colors.red, size: 28))
           ],
         )
       ],

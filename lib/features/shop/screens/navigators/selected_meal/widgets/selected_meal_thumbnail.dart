@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
+import 'package:new_crunchies_food/features/shop/models/meal_product_model.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
-import 'package:new_crunchies_food/utils/constants/image_strings.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 
 class SelectedMealThumbnail extends StatelessWidget {
-  const SelectedMealThumbnail({super.key});
+  final MealProductModel meal;
+  const SelectedMealThumbnail({super.key, required this.meal});
 
   @override
   Widget build(BuildContext context) {
@@ -19,26 +20,28 @@ class SelectedMealThumbnail extends StatelessWidget {
           height: screenHeight / 6.5,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-              image: DecorationImage(image: AssetImage(MyImages.productImage30), fit: BoxFit.cover)
+              image: DecorationImage(image: NetworkImage(meal.thumbnail), fit: BoxFit.cover)
+              //image: DecorationImage(image: AssetImage(MyImages.productImage30), fit: BoxFit.cover)
           ),
         ),
         SizedBox(height: MySizes.md),
         MyText(
-          title: 'Jumbo Roll',
+          title: meal.title,
           fontVariation: FontVariation.weight(700),
           fontSize: 14,
           color: MyColors.darkerGrey,
         ),
         SizedBox(height: MySizes.sm),
         MyText(
-          title: '#1,000',
+          title: '#${meal.price}',
           fontVariation: FontVariation.weight(800),
           fontSize: 16,
           color: Colors.black,
         ),
         SizedBox(height: MySizes.md),
         MyText(
-          title: 'Jumbo Roll',
+          //title: meal.description,
+          title: meal.title,
           fontVariation: FontVariation.weight(700),
           fontSize: 13,
           color: MyColors.darkerGrey,
@@ -50,8 +53,9 @@ class SelectedMealThumbnail extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              /// the meal should be the price multiplied by the number of times the add button is clicked
               MyText(
-                title: '#1,000',
+                title: '#${meal.price}',
                 fontVariation: FontVariation.weight(800),
                 fontSize: 18,
                 color: Colors.black,

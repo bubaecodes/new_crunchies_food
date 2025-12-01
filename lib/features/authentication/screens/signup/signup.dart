@@ -22,11 +22,11 @@ class SignupScreen extends StatelessWidget {
             Column(
               children: [
                 SignupHeading(),
-                SizedBox(height: MySizes.lg * 3.5),
+                SizedBox(height: MySizes.lg * 2),
                 SignupThumbnail(),
-                SizedBox(height: MySizes.lg * 5.5),
+                SizedBox(height: MySizes.lg - 10),
                 SignupForm(),
-                SizedBox(height: MySizes.lg * 7),
+                //SizedBox(height: MySizes.lg),
               ],
             ),
             Positioned(

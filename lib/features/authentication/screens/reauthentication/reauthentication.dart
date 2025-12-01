@@ -21,13 +21,13 @@ class ReauthenticationScreen extends StatelessWidget {
             Column(
               children: [
                 ReauthenticationHeading(),
-                SizedBox(height: MySizes.lg * 3.5),
+                SizedBox(height: MySizes.lg * 2.2),
                 ReauthenticationThumbnail(),
-                SizedBox(height: MySizes.lg * 4.2),
+                SizedBox(height: MySizes.lg * 3.2),
                 ReauthenticationConfirmNo(),
-                SizedBox(height: MySizes.lg * 4.5),
+                SizedBox(height: MySizes.lg * 3),
                 ReauthenticationForm(),
-                SizedBox(height: MySizes.lg * 7),
+                SizedBox(height: MySizes.lg * 4),
               ],
             ),
             Positioned(

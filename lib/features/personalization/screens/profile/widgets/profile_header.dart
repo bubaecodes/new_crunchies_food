@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
 import 'package:new_crunchies_food/features/personalization/controllers/profile_controller/profile_appbar_btn_controller.dart';
 import 'package:new_crunchies_food/features/personalization/screens/settings/setting_screen.dart';
+import 'package:new_crunchies_food/features/shop/controllers/home_controller/home_greeting_controller.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/image_strings.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
@@ -14,6 +15,7 @@ class ProfileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(ProfileAppbarBtnController());
+    final greetingController = Get.put(HomeGreetingController());
     return Column(
       children: [
         Row(
@@ -27,7 +29,7 @@ class ProfileHeader extends StatelessWidget {
             ),
             TextButton(
               onPressed: (){
-                controller.toggleText();
+                controller.toggleEdit();
               },
               child: Obx(
                 ()=> Text(
@@ -59,7 +61,11 @@ class ProfileHeader extends StatelessWidget {
                     image: DecorationImage(image: AssetImage(MyImages.chickenLogo), scale: 7)
                 ),
               ),
-              MyText(title: 'Bubae', fontVariation: FontVariation.weight(900), fontSize: 19),
+              MyText(
+                title: greetingController.username.value,
+                fontVariation: FontVariation.weight(900),
+                fontSize: 19
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

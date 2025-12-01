@@ -25,7 +25,7 @@ class OffersHeader extends StatelessWidget {
         Row(
           children: [
             MyText(title: MyTexts.offerPageViewTitle, fontVariation: FontVariation.weight(800), fontSize: 16),
-            Image.asset("assets/icons/flame.png", width: 20, height: 20,)
+            Image.asset("assets/icons/flame1.png", width: 20, height: 20,)
           ],
         ),
         SizedBox(height: MySizes.sm),

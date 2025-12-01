@@ -15,6 +15,14 @@ class SetLocationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Future.delayed(
+      const Duration(seconds: 3),
+      () {
+        Get.offAll(() => (MyBottomNav()));
+      }
+    );
+
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -39,11 +47,11 @@ class SetLocationScreen extends StatelessWidget {
                     Text(
                       MyTexts.setLocationSubheading,
                       style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: "Manrope",
-                          fontVariations: [
-                            FontVariation.weight(600)
-                          ]
+                        fontSize: 14,
+                        fontFamily: "Manrope",
+                        fontVariations: [
+                          FontVariation.weight(600)
+                        ]
                       ),
                     ),
                   ],
@@ -54,11 +62,9 @@ class SetLocationScreen extends StatelessWidget {
                 Column(
                   children: [
                     MyText(title: MyTexts.setLocationSearch, fontVariation: FontVariation.weight(700), fontSize: 14, color: MyColors.darkerGrey),
-                    //MyText(title: '...', fontVariation: FontVariation.weight(700), fontSize: 14, color: MyColors.darkerGrey)
                   ],
                 ),
                 SizedBox(height: MySizes.lg * 2),
-                ElevatedButton(onPressed: () => Get.to(MyBottomNav()), child: Text('NEXT'))
               ],
             ),
             Positioned(

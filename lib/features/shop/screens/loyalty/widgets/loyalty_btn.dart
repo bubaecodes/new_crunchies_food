@@ -19,7 +19,7 @@ class LoyaltyBtn extends StatelessWidget {
               side: BorderSide(color: MyColors.secondary),
             )
         ),
-        padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 140, vertical: 17)),
+        padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 115, vertical: 13)),
       ),
       child: MyText(
           title: MyTexts.loyaltyBtn,

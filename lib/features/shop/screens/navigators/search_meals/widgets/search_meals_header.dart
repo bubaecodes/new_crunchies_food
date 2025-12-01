@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
+import 'package:new_crunchies_food/features/shop/controllers/search_meal_controllers/search_meal_controller.dart';
 import 'package:new_crunchies_food/navigation_menu.dart';
 import 'package:new_crunchies_food/utils/constants/sizes.dart';
 import 'package:new_crunchies_food/utils/constants/text_strings.dart';
@@ -11,6 +12,7 @@ class SearchMealsHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = SearchMealController.instance;
     return Column(
       children: [
         Row(
@@ -27,6 +29,7 @@ class SearchMealsHeader extends StatelessWidget {
           children: [
             Expanded(
               child: TextField(
+                onChanged: controller.onSearch,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Iconsax.search_normal),
                   hintText: 'Search meals...',

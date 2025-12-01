@@ -21,7 +21,7 @@ class SupportBtn extends StatelessWidget {
             side: BorderSide(color: MyColors.lightPinkBg),
           ),
         ),
-        padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 133, vertical: 17)),
+        padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 105, vertical: 13)),
       ),
       child: MyText(
         title: MyTexts.supportBtn,

@@ -22,93 +22,165 @@ class ProfileScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: MyHomePadding(
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ProfileHeader(),
-              SizedBox(height: MySizes.lg + 10),
+          child: Form(
+            key: controller.profileFormKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ProfileHeader(),
+                SizedBox(height: MySizes.lg + 10),
 
-              /// first name
-              MyText(title: 'First Name', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
-              SizedBox(height: MySizes.xs),
-              Obx(()=> ProfileTextfield(hintText: 'Enter your first name', enabled: controller.isToggle.value,)),
-              SizedBox(height: MySizes.sm + 5),
-
-              /// last name
-              MyText(title: 'Last Name', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
-              SizedBox(height: MySizes.xs),
-              Obx(()=> ProfileTextfield(hintText: 'Enter your last name', enabled: controller.isToggle.value)),
-              SizedBox(height: MySizes.sm + 5),
-
-              /// phone number
-              MyText(title: 'Phone Number', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
-              SizedBox(height: MySizes.xs),
-              Obx(()=> ProfileTextfield(hintText: 'Enter your phone number', enabled: controller.isToggle.value)),
-              SizedBox(height: MySizes.sm + 5),
-
-
-              /// gender
-              MyText(title: 'Gender', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
-              SizedBox(height: MySizes.xs),
-              // Obx(
-              //   ()=> ProfileTextfield(
-              //     hintText: 'Select a gender',
-              //     enabled: controller.isToggle.value,
-              //     iconButton: IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_arrow_down)),
-              //   ),
-              // ),
-              Obx(
-                ()=> DropdownButtonFormField(
-                  decoration: InputDecoration(
-                    //enabled: controller.isToggle.value,
-                    hintText: 'Select a gender',
-                    hintStyle: TextStyle(fontVariations: [FontVariation.weight(600)], fontFamily: 'Manrope', fontSize: 14),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
-                      borderSide: BorderSide(color: MyColors.darkGrey),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
-                      borderSide: BorderSide(color: MyColors.darkGrey),
-                    ),
+                /// first name
+                MyText(title: 'First Name', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
+                SizedBox(height: MySizes.xs),
+                Obx(
+                  ()=> ProfileTextfield(
+                    textController: controller.firstNameController,
+                    hintText: 'Enter your first name',
+                    enabled: controller.isToggle.value,
                   ),
-                  value: genderController.selectedGender.value,
-                  items: genderController.gender.map((String value) {
-                    return DropdownMenuItem(
-                      value: value,
-                      child: MyText(title: value, fontVariation: FontVariation.weight(800), fontSize: 15),
-                    );
-                  }).toList(),
-                  onChanged: controller.isToggle.value ? genderController.selectedGender.call : null,
-                  validator: (value) =>
-                  value == null ? 'Please select gender' : null,
                 ),
-              ),
-              SizedBox(height: MySizes.sm + 5),
+                SizedBox(height: MySizes.sm + 5),
 
-
-              /// date of birth
-              MyText(title: 'Date of birth', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
-              SizedBox(height: MySizes.xs),
-              Obx(
-                ()=> ProfileTextfield(
-                  hintText: 'DD/MM',
-                  enabled: controller.isToggle.value,
-                  iconButton: IconButton(onPressed: (){}, icon: Icon(Iconsax.calendar_edit)),
+                /// last name
+                MyText(title: 'Last Name', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
+                SizedBox(height: MySizes.xs),
+                Obx(
+                  ()=> ProfileTextfield(
+                    textController: controller.lastNameController,
+                    hintText: 'Enter your last name',
+                    enabled: controller.isToggle.value
+                  ),
                 ),
-              ),
-              SizedBox(height: MySizes.sm + 5),
+                SizedBox(height: MySizes.sm + 5),
+
+                /// phone number
+                MyText(title: 'Phone Number', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
+                SizedBox(height: MySizes.xs),
+                Obx(
+                  ()=> ProfileTextfield(
+                    textController: controller.phoneNoController,
+                    hintText: 'Enter your phone number',
+                    enabled: controller.isToggle.value
+                  ),
+                ),
+                SizedBox(height: MySizes.sm + 5),
 
 
-              /// email
-              MyText(title: 'Email', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
-              SizedBox(height: MySizes.xs),
-              Obx(()=> ProfileTextfield(hintText: 'Enter your email', enabled: controller.isToggle.value)),
-              SizedBox(height: MySizes.sm + 5),
-            ],
+                /// gender
+                MyText(title: 'Gender', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
+                SizedBox(height: MySizes.xs),
+                // Obx(
+                //   ()=> ProfileTextfield(
+                //     hintText: 'Select a gender',
+                //     enabled: controller.isToggle.value,
+                //     iconButton: IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_arrow_down)),
+                //   ),
+                // ),
+                Obx(
+                  ()=> DropdownButtonFormField<String>(
+                    decoration: InputDecoration(
+                      //enabled: controller.isToggle.value,
+                      hintText: 'Select a gender',
+                      hintStyle: TextStyle(fontVariations: [FontVariation.weight(600)], fontFamily: 'Manrope', fontSize: 14),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7)),
+                        borderSide: BorderSide(color: MyColors.darkGrey),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(7)),
+                        borderSide: BorderSide(color: MyColors.darkGrey),
+                      ),
+                    ),
+                    value: genderController.selectedGender.value,
+                    items: genderController.gender.map((String value) {
+                      return DropdownMenuItem(
+                        value: value,
+                        child: MyText(title: value, fontVariation: FontVariation.weight(800), fontSize: 15),
+                      );
+                    }).toList(),
+                    //onChanged: controller.isToggle.value ? genderController.selectedGender.call : null,
+                    onChanged: controller.isToggle.value
+                        ? (value) => controller.genderController.value = value!
+                        : null,
+                    validator: (value) =>
+                    value == null ? 'Please select gender' : null,
+                  ),
+                ),
+                SizedBox(height: MySizes.sm + 5),
+
+
+                /// date of birth
+                MyText(title: 'Date of birth', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
+                SizedBox(height: MySizes.xs),
+                Obx(
+                  ()=> ProfileTextfield(
+                    textController: controller.dobController,
+                    hintText: 'DD/MM',
+                    enabled: controller.isToggle.value,
+                    iconButton: IconButton(onPressed: (){}, icon: Icon(Iconsax.calendar_edit)),
+                  ),
+                ),
+                SizedBox(height: MySizes.sm + 5),
+
+
+                /// email
+                MyText(title: 'Email', fontVariation: FontVariation.weight(900), fontSize: 15, color: MyColors.darkerGrey),
+                SizedBox(height: MySizes.xs),
+                Obx(
+                  ()=> ProfileTextfield(
+                    textController: controller.emailController,
+                    hintText: 'Enter your email',
+                    enabled: controller.isToggle.value
+                  ),
+                ),
+                SizedBox(height: MySizes.sm + 5),
+
+                ///update button
+                Obx(
+                  (){
+                    return controller.isToggle.value
+                      // ? MyButton(
+                      // onpressed: (){},
+                      // backgroundColor: WidgetStatePropertyAll(MyColors.secondary),
+                      // borderSide: BorderSide(
+                      //   color: MyColors.primary,
+                      //   width: 2,
+                      // ),
+                      // child: MyText(title: 'Update', fontVariation: FontVariation.weight(700), fontSize: 17),
+                      // )
+                      ? ElevatedButton(
+                      onPressed: () async {
+                        await controller.updateProfile();
+                        controller.isToggle.value = false;
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll(MyColors.secondary),
+                        elevation: WidgetStatePropertyAll(0),
+                        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            side: BorderSide(color: MyColors.lightPinkBg),
+                          ),
+                        ),
+                        padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 159, vertical: 17)),
+                      ),
+                      child: MyText(
+                          title: 'Update',
+                          fontVariation: FontVariation.weight(700),
+                          color: MyColors.textSecondary,
+                          fontSize: 15
+                      ),
+                    )
+                      : SizedBox.shrink();
+                  }
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+

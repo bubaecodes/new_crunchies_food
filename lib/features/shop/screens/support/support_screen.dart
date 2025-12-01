@@ -14,32 +14,34 @@ class SupportScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: MyHomePadding(
-        child: Column(
-          children: [
-            SizedBox(height: MySizes.md),
-            Row(
-              children: [
-                MyText(
-                  title: MyTexts.supportHeading,
-                  fontVariation: FontVariation.weight(800),
-                  fontSize: 20
-                ),
-              ],
-            ),
-            SizedBox(height: MySizes.sm),
-            MyText(
-                title: MyTexts.supportSubHeading,
-                fontVariation: FontVariation.weight(700),
-                fontSize: 15
-            ),
-            SizedBox(height: MySizes.xl * 3.0),
-            SupportThumbnail(),
-            SizedBox(height: MySizes.xl * 3.6),
-            SupportBody(),
-            SizedBox(height: MySizes.xl),
-            SupportBtn()
-          ],
+      body: SingleChildScrollView(
+        child: MyHomePadding(
+          child: Column(
+            children: [
+              SizedBox(height: MySizes.md),
+              Row(
+                children: [
+                  MyText(
+                    title: MyTexts.supportHeading,
+                    fontVariation: FontVariation.weight(800),
+                    fontSize: 20
+                  ),
+                ],
+              ),
+              SizedBox(height: MySizes.sm),
+              MyText(
+                  title: MyTexts.supportSubHeading,
+                  fontVariation: FontVariation.weight(700),
+                  fontSize: 15
+              ),
+              SizedBox(height: MySizes.xl * 1.5),
+              SupportThumbnail(),
+              SizedBox(height: MySizes.xl * 2.2),
+              SupportBody(),
+              SizedBox(height: MySizes.xl),
+              SupportBtn()
+            ],
+          ),
         ),
       ),
     );

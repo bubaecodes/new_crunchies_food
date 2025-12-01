@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:new_crunchies_food/common/widgets/mytext.dart';
 import 'package:new_crunchies_food/features/authentication/screens/location/location.dart';
+import 'package:new_crunchies_food/features/shop/controllers/home_controller/home_greeting_controller.dart';
+import 'package:new_crunchies_food/features/shop/controllers/home_controller/home_location_controller.dart';
 import 'package:new_crunchies_food/features/shop/screens/support/support_screen.dart';
 import 'package:new_crunchies_food/utils/constants/colors.dart';
 import 'package:new_crunchies_food/utils/constants/image_strings.dart';
@@ -15,6 +17,8 @@ class HomeAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final controller = Get.put(HomeLocationController());
+    final greetingController = Get.put(HomeGreetingController());
     return Column(
       children: [
         /// appbar
@@ -24,24 +28,31 @@ class HomeAppbar extends StatelessWidget {
               width: 60,
               height: 60,
               decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(image: AssetImage(MyImages.chickenLogo), scale: 7)
+                //color: Colors.red,
+                shape: BoxShape.circle,
+                image: DecorationImage(image: AssetImage(MyImages.chickenLogo))
               ),
             ),
-            SizedBox(width: MySizes.sm + 4),
+            SizedBox(width: MySizes.sm + 2.2),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                MyText(
-                    title: MyTexts.homeAppBarHeading,
-                    fontVariation: FontVariation.weight(700),
-                    fontSize: 20
+                Obx(
+                  () => MyText(
+                      //title: MyTexts.homeAppBarHeading,
+                      title: '${greetingController.greeting.value} ${greetingController.username.value}',
+                      fontVariation: FontVariation.weight(700),
+                      fontSize: 20
+                  ),
                 ),
-                MyText(
-                  title: MyTexts.homeAppBarSubHeading,
-                  fontVariation: FontVariation.weight(600),
-                  fontSize: 14,
-                  color: MyColors.darkerGrey,
+                Obx(
+                  () => MyText(
+                    //title: MyTexts.homeAppBarSubHeading,
+                    title: "It's time for ${greetingController.meal.value} - Taste the difference!",
+                    fontVariation: FontVariation.weight(600),
+                    fontSize: 14,
+                    color: MyColors.darkerGrey,
+                  ),
                 ),
               ],
             )
@@ -97,16 +108,19 @@ class HomeAppbar extends StatelessWidget {
                             Icon(Icons.arrow_right_alt)
                           ],
                         ),
-                        Text(
-                          MyTexts.homeContainerSubHeading,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          // softWrap: true,
-                          style: TextStyle(
-                            fontFamily: 'Manrope',
-                            fontVariations: [FontVariation.weight(700)],
-                            fontSize: 14,
-                            color: MyColors.black,
+                        Obx(
+                          () => Text(
+                            //MyTexts.homeContainerSubHeading,
+                            controller.outletLocation.value,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            // softWrap: true,
+                            style: TextStyle(
+                              fontFamily: 'Manrope',
+                              fontVariations: [FontVariation.weight(700)],
+                              fontSize: 14,
+                              color: MyColors.black,
+                            ),
                           ),
                         ),
                       ],
